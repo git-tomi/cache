@@ -1,0 +1,22 @@
+1：
+split:
+var username=document.cookie.split(";")[0].split("=")[1];  //使用split 来获取字符串
+
+2：localStorage的局限与优势
+优点：
+1:扩展了cookie的大小  从4K到5M
+2：将第一次请求的数据直接存到本地。
+局限：
+1：兼容性问题 ie8以下不兼容
+2：隐私模式下无法访问
+3：值类型限制为string 类型  ————存储需要JSON,stringify  读取需要 parse
+4: 本质为字符串读取，数据量大会造成网页卡顿
+5：无法被爬虫
+使用上
+增：3中方式 storage["a"]=1;
+            storage.a=1;
+			storage.setItem=1;
+读 getItem
+删除
+storage.clear()
+storage.removeItem("a");
